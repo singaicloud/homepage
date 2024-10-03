@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TACC | Scalable AI Infrastructure Designed for Evolving Machine Learning Research</title>
+    
+    <!-- CSS and JS Libraries-->
+    <script src="assets/bliss.js"></script>
+    <link rel="stylesheet" href="assets/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>jQuery.noConflict();</script>
+    <script src="https://cdn.datatables.net/v/bm/dt-2.1.2/datatables.min.js"></script>
+    <link href="assets/datatables.css" rel="stylesheet">
+
+    <!-- TACC Theme Files -->
+    <link href="assets/tacc-theme.css" rel="stylesheet">
+    <script src="assets/tacc-theme.js"></script>
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99d5980073.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="columns is-multiline is-desktop is-align-items-center is-justify-content-center">
+                <div class="column is-narrow logo has-text-centered"><a href="/"><img src="./assets/tacc-logo-white.png"></a></div>
+                <div class="column has-text-centered">
+                    <div class="columns is-mobile is-align-items-center items is-multiline">
+                        <div class="column is-narrow item"><a href="#">Build</a></div>
+                        <div class="column is-narrow item"><a href="storage.html">Pricing</a></div>
+                        <div class="column is-narrow item"><a href="images.html">Contact Us</a></div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section launchpad">
+        <div class="spotlight">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none"><g filter="url(#filter)"><ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="#9dc3f7" fill-opacity="0.21"></ellipse></g><defs><filter id="filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur_1065_8"></feGaussianBlur></filter></defs></svg>
+        </div>
+        <canvas id="particleCanvas"></canvas>
+                    
+        <div class="container">
+            <div class="chess">
+                <div id="board"></div>
+                <script src="chess/chess.min.js"></script>
+                <script src="chess/chessboard-1.0.0.min.js"></script>
+                <link href="chess/chessboard-1.0.0.css" rel="stylesheet">
+                <script src="chess/script.js"></script>
+            </div>
+            <div class="banner">
+                <div class="line">
+                    <div class="l"></div>
+                    <div class="t">Meet SING AI Cloud</div>
+                    <div class="r"></div>
+                </div>
+                <h1>Innovate. Build. Scale.</h1>
+                <h2>On SING Cloud, AI applications run smoother (and scale faster). <br>Effortless simplicity, fueled by cutting-edge research.</h2>
+                <div class="cta">Join the waitlist</div>
+            </div>
+            
+            <script>
+                const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+
+// Initial canvas size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+let particleCount = calculateParticleCount();
+
+class Particle {
+    constructor() {
+        this.reset();
+        this.y = Math.random() * canvas.height;
+        this.fadeDelay = Math.random() * 600 + 100;
+        this.fadeStart = Date.now() + this.fadeDelay;
+        this.fadingOut = false;
+    }
+
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.speed = Math.random() / 5 + 0.1;
+        this.opacity = 1;
+        this.fadeDelay = Math.random() * 600 + 100;
+        this.fadeStart = Date.now() + this.fadeDelay;
+        this.fadingOut = false;
+    }
+
+    update() {
+        this.y -= this.speed;
+        if (this.y < 0) {
+            this.reset();
+        }
+
+        if (!this.fadingOut && Date.now() > this.fadeStart) {
+            this.fadingOut = true;
+        }
+        
+        if (this.fadingOut) {
+            this.opacity -= 0.008;
+            if (this.opacity <= 0) {
+                this.reset();
+            }
+        }
+    }
+
+    draw() {
+        ctx.fillStyle = `rgba(${255 - (Math.random() * 255/2)}, 255, 255, ${this.opacity})`;
+        ctx.fillRect(this.x, this.y, 0.6, Math.random() * 2 + 1);
+    }
+}
+
+function initParticles() {
+    particles = [];
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+    });
+    requestAnimationFrame(animate);
+}
+
+function calculateParticleCount() {
+    return Math.floor((canvas.width * canvas.height) / 6000);
+}
+
+function onResize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    particleCount = calculateParticleCount();
+    initParticles();
+}
+
+window.addEventListener('resize', onResize);
+
+initParticles();
+animate();
+            </script>
+        </div>
+    </section>
+
+
+    <footer class="section footer">
+        <div class="container">
+            <div class="columns content">
+                <div class="column items is-3">
+                    <div class="item item-title">TACC Workflow</div>
+                    <div class="item">Launch & Monitor AI Jobs</div>
+                    <div class="item">Access Cloud Storage</div>
+                    <div class="item">Manage Code & Scripts</div>
+                </div>
+                <div class="column items is-3">
+                    <div class="item item-title">TACC Space</div>
+                    <div class="item">Latest Public Images</div>
+                    <div class="item">Public Dataset</div>
+                    <div class="item">Discussion Groups</div>
+                </div>
+                <div class="column items is-3">
+                    <div class="item item-title">Research</div>
+                    <div class="item">AI-centric Networking</div>
+                    <div class="item">Machine Learning Systems</div>
+                    <div class="item">Cluster Resource Scheduling</div>
+                </div>
+                <div class="column items is-3">
+                    <div class="item item-title">Company</div>
+                    <div class="item">Our Team</div>
+                    <div class="item">Careers</div>
+                    <div class="item">HKUST iSING Lab</div>
+                </div>
+            </div>
+            <div class="columns is-align-items-center">
+                <div class="column is-narrow logo"><img src="assets/tacc-logo.png" /></div>
+                <div class="column copyright is-narrow"><span class="text-brand">星畅</span> © 2020–2024</div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+</body>
+</html>
