@@ -190,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function makeBestMove() {
         if (game.game_over()) {
             alert('Checkmate! Thanks for playing. Email us if you would like to join our team!');
-            jQuery(".banner").show();
             return;
         }
         var move = getBestMove(game, 'b', globalSum)[0];
@@ -199,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
         board.position(game.fen());
         if (game.game_over()) {
             alert('Checkmate! Thanks for playing. Email us if you would like to join our team!');
-            jQuery(".banner").show();
             return;
         }
     }
@@ -207,7 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to handle the start of a drag position
     const onDragStart = (source, piece) => {
         // Allow the user to drag only their own pieces based on color
-        jQuery(".banner").hide();
+        jQuery(".headline").hide();
+        jQuery(".chess").addClass("active");
         return !game.game_over() && piece.search(userColor) === 0;
     };
 
@@ -229,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuration options for the chessboard
     const boardConfig = {
-        pieceTheme: 'chess/chesspieces/neo/{piece}.png',
+        pieceTheme: './assets/chess/chesspieces/neo/{piece}.png',
         orientation: 'white',
         position: 'start',
         showNotation: false,

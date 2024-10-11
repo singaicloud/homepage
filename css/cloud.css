@@ -1,0 +1,125 @@
+.cloud {
+	background-color: black;
+	color: white;
+}
+.cloud h1 {
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+	font-weight: bold;
+	margin-top: 8rem;
+}
+.cloud h2 {
+	text-align: center;
+	font-size: 1.8rem;
+	color: white;
+	margin-bottom: 6rem;
+}
+.cloud .features .card {
+	box-shadow: 0 0 0 1px #bad7f72d;
+	border-radius: 1.5rem;
+	padding: 2rem;
+	background-color: rgb(34,38,43);
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.cloud .features .card .icon {
+	margin-bottom: .5rem;
+}
+.cloud .features .card h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.cloud .features .card h4 {
+	font-size: 1rem;
+}
+.cloud .card1,  .cloud .card2 {
+	height: 30rem;
+	overflow: hidden;
+}
+.cloud .card1 {
+	background: radial-gradient(128% 107% at 0% 0%, #292929 0%, rgb(0, 0, 0) 77.6%);
+}
+.cloud .card1 .images {
+	position: relative;
+	height: 100%;
+	top: 5%;
+}
+.cloud .card1 .images>* {
+	position: absolute;
+	box-shadow: -10px 0 30px #b0b0b024, -.5px -.5px 0 .4px #8f8f8f40;
+}
+.cloud .card1 .img1 {
+	width: 70%;
+	top: 0%;	
+}
+.cloud .card1 .img2 {
+	width: 120%;
+	top: 20%;
+	left: 20%;
+}
+.cloud .card1 .img3 {
+	width: 70%;
+	left: 40%;
+	top: 40%;
+	max-width: none;
+}
+.cloud .card2 {
+	background: radial-gradient(97% 98% at 99.1% 99.1%, #0080c4 0%, rgb(0, 3, 15) 100%);
+}
+.cloud .card2 .images {
+	position: relative;
+	width: 250%;
+	top: 10%;
+	left: -25%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: .5rem;
+}
+.cloud .card2 .images>img {
+	box-shadow: -10px 0 30px #938dff24, -.5px -.5px 0 .4px #8f8f8f40;
+	border-radius: .5rem;
+	opacity: 0.7;
+	height: 10rem;
+}
+.cloud .level2-l>.column .card, .cloud .level2-r>.column .card {
+	height: 100%;
+}
+.cloud .level2>.column {
+	display: flex;
+}
+.cloud .card.small {
+	align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.cloud .arch {
+	display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+	background-image: radial-gradient(100% 100% at top, rgba(157, 195, 247, .1), rgba(157, 195, 247, 0));
+	background-color: rgb(6, 45, 122);
+	border-radius: 1.5rem;
+}
+.cloud .arch .card {
+	padding: 1rem;
+	text-align: center;
+}
+.cloud .arch h3 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+.cloud .arch h4 {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.cloud .vanta-canvas {
+	opacity: 0.5;
+}

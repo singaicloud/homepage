@@ -1,0 +1,281 @@
+.research {
+	color: white;
+	background-color: black;
+}
+.research h1 {
+	font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.research h2 {
+	font-weight: bold;
+	font-size: 2.2rem;
+	margin-bottom: .5rem;
+}
+.research h2 + p {
+    margin-bottom: 1rem;
+    color: #303030
+    padding-bottom: 1rem;
+}
+.research .columns.publication {
+	margin-bottom: 3rem;
+}
+.research .columns.solution {
+    flex-direction: row-reverse;
+}
+.research .frame {
+	display: flex;
+	flex-direction: column;
+    position: relative;
+    overflow: hidden;
+	padding: 2rem;
+	border-radius: .75rem;
+	height: 100%;
+}
+.research .frame:after {
+    content: "";
+    border: 1px solid rgba(255,255,255,0.12);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+.research .main {
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: auto;
+    gap: 2rem;
+}
+.research .link {
+	margin-top: auto;
+    z-index: 100;
+    position: relative;
+    top: 3rem;
+}
+.research .item {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #ffffff1c;
+    padding: 1rem;
+    border-radius: .75rem;
+}
+.research .item h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.research .item h4 {
+	font-size: 1rem;
+}
+.research .item .item-author {
+    color: #f3f3f3;
+    font-size: .9rem;
+}
+.research .item .icon {
+    width: 100%;
+    justify-content: flex-start;
+    align-content: center;
+    overflow: hidden;
+}
+.research .item .icon span {
+    margin-left: .5rem;
+    font-weight: bold;
+}
+.research .item .icon img {
+    height: 2rem;
+}
+.research .link div {
+    font-weight: 400;
+    line-height: 2rem;
+    font-size: .9rem;
+    color: #c9c9c9;
+    background-color: #bebebe0f;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.research .link div:hover {
+    background-color: white!important;
+    color: black!important;
+}
+.research .link svg {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+/* effect */
+
+.research .effect1 {
+	background: radial-gradient(91% 83% at 50% 100%, rgba(26, 29, 255, .3) 11.09938063063063%, rgba(22, 70, 227, .37) 34.83072916666667%, rgba(0, 0, 0, .15) 100%);
+    flex-direction: column;
+    height: 100%;
+}
+.effect1 .effect1-a {
+	flex: 1 0 150px;
+    height: 1px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+}
+.effect1 .effect1-b {
+	inset: -93px -138px -137px;
+    mask: radial-gradient(50% 50% at 50% 63.3%, rgba(0, 0, 0, .86) 35.07355011261261%, rgba(0, 0, 0, 0) 78.17074887387389%) add;
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+}
+.effect1 .effect1-c1 {
+	background: radial-gradient(50% 50% at 50% 50%, #0554ff 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 100%;
+    bottom: 10px;
+    flex: none;
+    height: 340px;
+    left: calc(50% - 654px / 2);
+    opacity: .8;
+    overflow: hidden;
+    position: absolute;
+    width: 654px;
+}
+.effect1 .effect1-c2 {
+	border-radius: 100%;
+    bottom: 0;
+    box-shadow: 0 -20px 40px #059bffcc;
+    flex: none;
+    height: 199px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+.effect1 .effect1-c3 {
+	background: radial-gradient(75% 75% at 50% 73.9%, #000000 0%, rgb(5, 13, 52) 46%, rgb(5, 153, 255) 78.515625%, rgb(135, 227, 255) 90.31179617117118%, rgb(217, 246, 255) 100.9009009009009%);
+    border-radius: 100%;
+    bottom: 11px;
+    filter: blur(5px);
+    flex: none;
+    height: 199px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.effect2 .effect2-a {
+    flex: 1 0 150px;
+    height: 1px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+}
+.effect2 .effect2-b {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    width: calc(100% + 5rem);
+    height: 120%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 1;
+}
+.effect2 .effect2-c1 {
+    background: radial-gradient(50% 100% at 50% 100%, rgb(44, 127, 209) 25.17771677927928%, rgba(53, 129, 230, 0.6) 54.11563907657657%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;
+    bottom: -1px;
+    flex: none;
+    height: 89%;
+    left: calc(50.00000000000002% - 1852px / 2);
+    overflow: hidden;
+    position: absolute;
+    width: 1852px;
+}
+.effect2 .effect2-c2 {
+    background: radial-gradient(50% 100% at 50% 100%, rgba(0, 119, 255, 0.9) 42.67666103603604%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;
+    bottom: -1px;
+    flex: none;
+    height: 72%;
+    left: calc(49.916666666666686% - 1560px / 2);
+    overflow: hidden;
+    position: absolute;
+    width: 1560px;
+}
+.effect2 .effect2-c3 {
+    background: radial-gradient(50% 100% at 73.2% 100%, rgba(0, 119, 255, 0.9) 42.67666103603604%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;    
+    bottom: -1px;
+    flex: none;
+    height: 75%;
+    left: -44px;
+    overflow: hidden;
+    position: absolute;
+    right: -44px;
+}
+.effect2 .effect2-c4 {
+    mask: radial-gradient(118% 69% at 100% 100%, rgba(0, 0, 0, 1) 8.111627252252253%, rgba(0, 0, 0, 0.17) 53.3203125%, rgba(0, 0, 0, 0) 100%) add;
+    height: 321px;
+    position: absolute;
+    bottom: 0;
+    width: 120%;
+}
+.effect2 .effect2-c5 {
+    inset: -369px 0 0;
+    position: absolute;
+    width: 120%;
+    left: -4rem;
+    z-index: 4;
+}
+.effect2 .effect2-d1 {
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 44.70px auto;
+    background-image: url(https://framerusercontent.com/images/icNdvMhMMBFdllijaPNDAuvOUJA.png);
+    border: 0;
+}
+.effect2 .effect2-d2 {
+    background: radial-gradient(50% 32% at 50% 100%, rgb(0, 157, 255) 0%, rgba(0, 217, 255, 0.25) 53%, rgba(0, 119, 255, 0.15) 79%, rgba(0, 178, 255, 0) 100%);
+    bottom: 0;
+    flex: none;
+    height: 290px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+.effect2 .effect2-d3 {
+    background: linear-gradient(180deg, rgba(0, 153, 255, 0) 0%, rgb(0, 178, 255) 100%);
+    mask: radial-gradient(73% 93% at 48.5% 40.300000000000004%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 64%, rgba(0, 0, 0, 1) 100%) add;
+    -webkit-mask: radial-gradient(73% 93% at 48.5% 40.300000000000004%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 64%, rgba(0, 0, 0, 1) 100%) add;
+    inset: 108px 0 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+}
+.effect2 .effect2-d4 {
+    background: linear-gradient(180deg, rgba(0, 85, 255, 0) 0%, rgba(8, 0, 255, 0.7) 100%);
+    mask: radial-gradient(50% 131% at 48.699999999999996% 31.8%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.32556) 64%, rgba(0, 0, 0, 1) 100%) add;
+    -webkit-mask: radial-gradient(50% 131% at 48.699999999999996% 31.8%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.32556) 64%, rgba(0, 0, 0, 1) 100%) add;
+    inset: 208px 0 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+}
+.research .vanta-canvas {
+    opacity: 0.3;
+}

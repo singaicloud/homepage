@@ -1,0 +1,159 @@
+.banner {
+  background-color: var(--background-grey);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 52rem;
+  background: black;
+  position: relative;
+  background-color: #000;
+}
+.spotlight svg {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  left: 20rem;
+  height: 100%;
+  pointer-events: none;
+  animation: spotlight 15s ease 1s 1 forwards;
+}
+@keyframes spotlight {
+  0% {
+      opacity: 0;
+      transform: translate(-72%,-62%) scale(.5)
+  }
+  15% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1)
+  }
+  40% {
+      opacity: 1;
+      transform-origin: top left;
+      transform: translate(-50%,-40%) scaleX(1.5)
+  }
+  65% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1)
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1)
+  }
+}
+.chess {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  margin-top: 6.8rem;
+  justify-content: center;
+  transform: perspective(900px) rotate3D(1, 0, 0, 30deg) translate(0px, -200px);
+}
+.chess #board {
+  position: relative;
+  width: 800px;
+}
+.chess img {
+  opacity: 0.3;
+}
+.chess img[data-piece^="w"] {
+  opacity: 0.066;
+}
+.chess.active .piece-417db {
+  opacity: 1!important;
+}
+
+@keyframes shiny {
+  0% {
+      --p: 0%
+  }
+  50% {
+      --p: 500%
+  }
+  to {
+      --p: 500%
+  }
+}
+@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+.headline {
+  width: 100%;
+  text-align: center;
+  padding-top: 10rem;
+  max-width: 56rem;
+  margin: 0 auto;
+  position: relative;
+}
+.headline .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.headline .line .l, .headline .line .r {
+  width: 6rem;
+  height: 1px;
+}
+.headline .line .l {
+  background-image: linear-gradient(to left, rgba(157, 195, 247, 0.333), rgba(0, 0, 0, 0))
+}
+.headline .line .r {
+  background-image: linear-gradient(to right, rgba(157, 195, 247, 0.333), rgba(0, 0, 0, 0))
+}
+.headline .line .t {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg,#bad1f1 30%,#9dc3f7 100%);
+  text-shadow: 0 2px 16px rgba(174,207,242,.24);
+  font-size: 1.5rem;
+}
+.headline h1 {
+  z-index: 100;
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  --p: 0%;
+  background-image: radial-gradient(3em 3em at 50% 50%, transparent calc(var(--p) - 3em), #ffffff99 calc(var(--p) - 1em), #ffffff99 calc(var(--p) - .4em), transparent var(--p)), linear-gradient(0deg,#bad1f1 30%,#9dc3f7 100%);
+  animation: shiny 8s linear 1.2s infinite;
+  text-shadow: 0 2px 16px rgba(174,207,242,.24);
+}
+.headline h2 {
+  color: rgba(240, 249, 255, 0.7);
+  width: 50rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+.headline .cta {
+  color: white;
+  background-color: rgba(47, 128, 237, 0.5);
+  box-shadow: rgb(90, 165, 250) 0px 0px 0px 1px inset;
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: 10rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  cursor: default;
+}
+.headline .cta:hover {
+  background-color: rgba(47, 128, 237);
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .25s;
+
+}
+
+canvas#particleCanvas {
+  position: absolute; 
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 120%;
+  left: -3rem;
+}

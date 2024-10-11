@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TACC | Scalable AI Infrastructure Designed for Evolving Machine Learning Research</title>
+    <title>SING Cloud | Next-Gen AI Cloud | Scalable AI Infrastructure Designed for Evolving Machine Learning Research</title>
     
     <!-- CSS and JS Libraries-->
     <script src="assets/bliss.js"></script>
     <link rel="stylesheet" href="assets/bulma.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/jquery-3.7.1.min.js"></script>
     <script>jQuery.noConflict();</script>
-    <script src="https://cdn.datatables.net/v/bm/dt-2.1.2/datatables.min.js"></script>
-    <link href="assets/datatables.css" rel="stylesheet">
+    <script src="./assets/lottie-player.js"></script>
+    <script src="assets/three.min.js"></script>
+
 
     <!-- TACC Theme Files -->
-    <link href="assets/tacc-theme.css" rel="stylesheet">
-    <script src="assets/tacc-theme.js"></script>
-    
+    <script src="js/theme.js"></script>
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/research.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/workflow.css" rel="stylesheet">
+    <link href="css/cloud.css" rel="stylesheet">
+
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,129 +35,341 @@
                 <div class="column is-narrow logo has-text-centered"><a href="/"><img src="./assets/tacc-logo-white.png"></a></div>
                 <div class="column has-text-centered">
                     <div class="columns is-mobile is-align-items-center items is-multiline">
-                        <div class="column is-narrow item"><a href="#">Build</a></div>
-                        <div class="column is-narrow item"><a href="storage.html">Pricing</a></div>
-                        <div class="column is-narrow item"><a href="images.html">Contact Us</a></div>   
+                        <div class="column is-narrow item"><a href="#workflow">Models & Workflow</a></div>
+                        <div class="column is-narrow item"><a href="#cloud">Cloud Resource</a></div>
+                        <div class="column is-narrow item"><a href="#">Multi-Cloud</a></div>   
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="section launchpad">
+    <section class="section banner">
         <div class="spotlight">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none"><g filter="url(#filter)"><ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="#9dc3f7" fill-opacity="0.21"></ellipse></g><defs><filter id="filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur_1065_8"></feGaussianBlur></filter></defs></svg>
         </div>
         <canvas id="particleCanvas"></canvas>
+        <script src="js/particles.js"></script>
                     
         <div class="container">
             <div class="chess">
                 <div id="board"></div>
-                <script src="chess/chess.min.js"></script>
-                <script src="chess/chessboard-1.0.0.min.js"></script>
-                <link href="chess/chessboard-1.0.0.css" rel="stylesheet">
-                <script src="chess/script.js"></script>
+                <link href="assets/chess/chessboard-1.0.0.css" rel="stylesheet">
+                <script src="assets/chess/chess.min.js"></script>
+                <script src="assets/chess/chessboard-1.0.0.min.js"></script>
+                <script src="js/chess.js"></script>
             </div>
-            <div class="banner">
+            <div class="headline">
                 <div class="line">
                     <div class="l"></div>
-                    <div class="t">Meet SING AI Cloud</div>
+                    <div class="t">Meet the Next-Gen AI Cloud</div>
                     <div class="r"></div>
                 </div>
                 <h1>Innovate. Build. Scale.</h1>
                 <h2>On SING Cloud, AI applications run smoother (and scale faster). <br>Effortless simplicity, fueled by cutting-edge research.</h2>
                 <div class="cta">Join the waitlist</div>
             </div>
-            
-            <script>
-                const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-
-// Initial canvas size
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-let particleCount = calculateParticleCount();
-
-class Particle {
-    constructor() {
-        this.reset();
-        this.y = Math.random() * canvas.height;
-        this.fadeDelay = Math.random() * 600 + 100;
-        this.fadeStart = Date.now() + this.fadeDelay;
-        this.fadingOut = false;
-    }
-
-    reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.speed = Math.random() / 5 + 0.1;
-        this.opacity = 1;
-        this.fadeDelay = Math.random() * 600 + 100;
-        this.fadeStart = Date.now() + this.fadeDelay;
-        this.fadingOut = false;
-    }
-
-    update() {
-        this.y -= this.speed;
-        if (this.y < 0) {
-            this.reset();
-        }
-
-        if (!this.fadingOut && Date.now() > this.fadeStart) {
-            this.fadingOut = true;
-        }
-        
-        if (this.fadingOut) {
-            this.opacity -= 0.008;
-            if (this.opacity <= 0) {
-                this.reset();
-            }
-        }
-    }
-
-    draw() {
-        ctx.fillStyle = `rgba(${255 - (Math.random() * 255/2)}, 255, 255, ${this.opacity})`;
-        ctx.fillRect(this.x, this.y, 0.6, Math.random() * 2 + 1);
-    }
-}
-
-function initParticles() {
-    particles = [];
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-}
-
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-    });
-    requestAnimationFrame(animate);
-}
-
-function calculateParticleCount() {
-    return Math.floor((canvas.width * canvas.height) / 6000);
-}
-
-function onResize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particleCount = calculateParticleCount();
-    initParticles();
-}
-
-window.addEventListener('resize', onResize);
-
-initParticles();
-animate();
-            </script>
         </div>
     </section>
 
+    <div class="section workflow" id="workflow">
+        <h1>The Innovation Engine for GenAI Applications</h1>
+        <h2>Orchestrate LLM models from agents to complex AI workflows, with an RAG engine.</h2>
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column frame frame-1">
+                    <h3>End-to-end AI workflows</h3>
+                    <h4>Flexibly orchestrate AI processes, integrate with existing systems, and monitor runtime for reliable business deployment.</h4>
+                    <div class="images">
+                        <img class="a" src="assets/frame-1a.png" />
+                        <img class="b" src="assets/frame-1b.png" />
+                    </div>
+                </div>
+                <div class="column frame frame-2">
+                    <h3>Build Autonomous AI Agents</h3>
+                    <h4>Create AI Agents with just a few clicks, letting them independently use enterprise-defined tools and data to solve complex tasks.</h4>
+                    <div class="images">
+                        <img class="a" src="assets/frame-2a.png" />
+                        <img class="b" src="assets/frame-2b.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column frame frame-3">
+                    <h3>Chatbots and AI assistants for Industries</h3>
+                    <h4>Deploy customized chatbots or AI assistants embedded with domain knowledge in 5 minutes, pioneering human-AI collaboration.</h4>
+                    <div class="images">
+                        <img class="a" src="assets/frame-3a.png" />
+                        <img class="b" src="assets/frame-3b.png" />
+                    </div>
+                </div>
+                <div class="column frame frame-4">
+                    <h3>Seamless Integration of External Knowledge</h3>
+                    <h4>Unlock Deeper LLM Insights with Custom APIs, Connecting Business Knowledge Safely.</h4>
+                    <div class="images">
+                        <img class="a" src="assets/frame-4a.png" />
+                        <img class="b" src="assets/frame-4b.png" />
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section cloud" id="cloud">
+        <h1>Cloud-Native Power with Top-Tier GPU Performance</h1>
+        <h2>The full stack AI cloud built for machine learning developers.</h2>
+        <div class="container features">
+            <div class="columns level1">
+                <div class="column">
+                    <div class="card card1">
+                        <div class="icon"><svg viewBox="0 0 32 32" id="svg1132013851"><path d="M 15 13 L 17 13 M 19 17 L 26 17 M 17 21 L 22 21 M 15 25 L 17 25 M 10 9 L 10 29 M 1 3 L 31 3 L 31 29 L 1 29 Z M 1 8 L 31 8" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/></svg></div>
+                        <h3>User Command Line & HTTP API</h3>
+                        <h4>Flexible user control via CLI and API integration.</h4>
+                        <div class="images">
+                            <div class="img1">
+                                <lottie-player src="assets/cloud-cli2.json" background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
+                            </div>                            
+                            <img class="img2" src="assets/cloud-cli3.png"/>
+                            <img class="img3" src="assets/cloud-cli2.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card2">
+                        <div class="icon"><svg viewBox="0 0 32 32" id="svg3136490575"><g transform="translate(2 2.999)" id="ss3136490575_1"><path d="M 0 3.501 L 7 7.001 L 14 3.501 M 7 7.001 L 7 15.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 14 3.501 L 7 0 L 0 3.501 L 0 12.001 L 7 15.501 L 14 12.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 14 3.501 L 21 7.001 L 28 3.501 M 21 7.001 L 21 15.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 28 3.501 L 21 0 L 14 3.501 L 14 12.001 L 21 15.501 L 28 12.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 7 15.501 L 14 19.001 L 21 15.501 M 14 19.001 L 14 27.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 21 15.501 L 14 12 L 7 15.501 L 7 24.001 L 14 27.501 L 21 24.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/></g></svg></div>
+                        <h3>Web Dashboard</h3>
+                        <h4>Intuitive web interface for real-time monitoring and management.</h4>
+                        <div class="images">  
+                            <div style="width: 8rem"></div>                       
+                            <img class="img1" src="assets/cloud-dash1.png"/>
+                            <img class="img2" src="assets/cloud-dash2.png"/>
+                            <img class="img3" src="assets/cloud-dash3.jpeg"/>
+                            <img class="img4" src="assets/cloud-dash4.jpeg"/>
+                            <img class="img5" src="assets/cloud-dash5.jpeg"/>
+                            <img class="img4" src="assets/cloud-dash4.jpeg"/>
+                            <img class="img3" src="assets/cloud-dash3.jpeg"/>
+                            <img class="img2" src="assets/cloud-dash2.png"/>
+                            <img class="img4" src="assets/cloud-dash4.jpeg"/>
+                            <img class="img5" src="assets/cloud-dash5.jpeg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns level2">
+                <div class="column">
+                    <div class="columns is-flex-direction-column level2-l">
+                        <div class="column">
+                            <div class="card small">
+                                <h3>Image</h3>
+                                <h4>Pre-configured environments optimized for AI and machine learning tasks.</h4>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card small">
+                                <h3>Job</h3>
+                                <h4>Efficient task execution and management for large-scale workloads.</h4>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card small">
+                                <h3>Service</h3>
+                                <h4>Scalable backend services for AI infrastructure and operations.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="arch">
+                        <h3>SING Cloud Architecture</h3>
+                        <h4>AI Cloud Interface</h4>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <div class="card">User Command Line & HTTP API</div>
+                            </div>
+                            <div class="column">
+                                <div class="card">Web Dashboard</div>
+                            </div>
+                        </div>             
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <div class="card">Image</div>
+                            </div>
+                            <div class="column">
+                                <div class="card">Job</div>
+                            </div>
+                            <div class="column">
+                                <div class="card">Service</div>
+                            </div>
+                        </div>
+                        <h4>Global Resource Network</h4>
+                        <div class="columns is-mobile">
+                            <div class="column"><div class="card">Cluster Job Scheduler</div></div>
+                            <div class="column"><div class="card">Network Overlay</div></div>
+                        </div>             
+                        <div class="columns is-mobile">
+                            <div class="column"><div class="card">AI-centric Networking</div></div>
+                            <div class="column"><div class="card">GPU Hardware</div></div>
+                            <div class="column"><div class="card">Unified Data Storage</div></div>
+                        </div>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="columns is-flex-direction-column level2-r">
+                        <div class="column"><div class="card small">
+                            <h3>Cluster Job Scheduler</h3>
+                            <h4>Advanced job scheduling for optimized cluster resource utilization.</h4>
+                        </div></div>
+                        <div class="column"><div class="card small">
+                            <h3>Network Overlay</h3>
+                            <h4>Secure, high-performance virtual networking for cloud clusters.</h4>
+                        </div></div>
+                    </div>
+                </div>            
+            </div>
+            <div class="columns level3">
+                <div class="column"><div class="card small">
+                    <h3>AI-centric Networking</h3>
+                    <h4>Optimized network infrastructure designed for AI workloads.</h4>
+                </div></div>
+                <div class="column"><div class="card small">
+                    <h3>GPU Hardware</h3>
+                    <h4>High-performance and affordable GPUs for demanding AI applications.</h3>
+                </div></div>
+                <div class="column"><div class="card small">
+                    <h3>Unified Data Storage</h3>
+                    <h4>Centralized, scalable storage solution for AI and cloud data management.</h4>
+                </div></div>
+            </div>
+        </div>
+        <script src="assets/vanta.net.min.js"></script>
+        <script>
+        VANTA.NET({
+          el: ".cloud",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x888888,
+          backgroundColor: 0x0,
+          points: 16.00,
+          maxDistance: 25.00,
+          spacing: 20.00
+        })
+        </script>
+    </div>   
+
+    <div class="section research" id="research">
+        <div class="container"> 
+            <h1>We research <span class="text-underlined text-colored">efficient cluster management solution</span> optimized for <span class="spacing"><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>AI applications in large-scale GPU clusters</h1>          
+            <div class="columns publication">
+                <div class="column is-5">
+                    <div class="frame effect1">
+                        <h2>Pioneering AI Infrastructure Research</h2>
+                        <p class="description">We lead the way in developing cutting-edge cluster management solutions for AI applications. Our research in AI infrastructure, ML systems, and AI-centric networking drives performance, scalability, and reliability in large-scale GPU clusters.</p>
+                        <div class="link">
+                            <a href="https://arxiv.org/abs/2110.01556">
+                                <div>
+                                    Read Our Experience Paper
+                                    <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 16 16" role="img" class="cds--btn__icon" xmlns="http://www.w3.org/2000/svg"><path d="M9.3 3.7L13.1 7.5 1 7.5 1 8.5 13.1 8.5 9.3 12.3 10 13 15 8 10 3z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="effect1-a">
+                            <div class="effect1-b">
+                                <div class="effect1-c1"></div>
+                                <div class="effect1-c2"></div>
+                                <div class="effect1-c3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7">    
+                    <div class="main">
+                        <div class="item">
+                            <div class="icon"><img src="assets/tech-3.svg"><span>AI Infrastructure</span></div>
+                            <div class="item-title">Design and Operation of Shared Machine Learning Clusters on Campus (ASPLOS 2025)</div>
+                            <div class="item-author">Kaiqiang Xu, Decang Sun, Hao Wang, Zhenghang Ren, Xinchen Wan, Xudong Liao, Zilong Wang, Junxue Zhang, Kai Chen</div>
+                        </div>                            
+                        <div class="item">
+                            <div class="icon"><img src="assets/tech-2.svg"><span>ML Systems</span></div>
+                            <div class="item-title">An Efficient Multi-Level Inference System for Large Language Models (EuroSys 2023)</div>
+                            <div class="item-author">Yiding Wang, Kai Chen, Haisheng Tan, Kun Guo</div>
+                        </div>                            
+                        <div class="item">
+                            <div class="icon"><img src="assets/tech-4.svg"><span>AI-centric Networking</span></div>
+                            <div class="item-title">Towards Domain-Specific Network Transport for Distributed DNN Training (NSDI 2024)</div>
+                            <div class="item-author">Hao Wang, Han Tian, Jingrong Chen, Xinchen Wan, Jiacheng Xia, Gaoxiong Zeng, Wei Bai, Junchen Jiang, Yong Wang, Kai Chen</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns solution">
+                <div class="column is-6">
+                    <div class="frame effect2">
+                        <h2>Embrace an AI-Optimized Cluster Solution</h2>
+                        <p>Boost your on-premise infrastructure with our research-backed cluster management system. Benefit from 24/7 hardware monitoring, streamlined maintenance, and efficient job scheduling to maximize performance and reliability.</p>
+                        <div class="link">
+                            <a href="mailto:tacc-contact@lists.ust.hk?subject=Deploying TACC in my own cluster">
+                                <div>
+                                    Explore On-premise Deployment
+                                    <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 16 16" role="img" class="cds--btn__icon" xmlns="http://www.w3.org/2000/svg"><path d="M9.3 3.7L13.1 7.5 1 7.5 1 8.5 13.1 8.5 9.3 12.3 10 13 15 8 10 3z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="effect2-a">
+                            <div class="effect2-b">
+                                <div class="effect2-c1"></div>
+                                <div class="effect2-c2"></div>
+                                <div class="effect2-c3"></div>
+                                <div class="effect2-c4"><div class="effect2-d1"></div></div>
+                                <div class="effect2-c5">
+                                    <div class="effect2-d2"></div>
+                                    <div class="effect2-d3"></div>
+                                    <div class="effect2-d4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">    
+                    <div class="main">
+                        <div class="item">
+                            <h3>High <span class="text-colored">Stability</span></h3>
+                            <h4>TACC enhances operational reliability by providing continuous 24/7 hardware monitoring, robust containerization options, and equitable and efficient job scheduling mechanisms.</h4>
+                        </div>
+                        <div class="item">
+                            <h3>Enhanced <span class="text-colored">Usability</span></h3>
+                            <h4>Task provisioning and management are effortless with TACC. Users can submit and monitor tasks via command line, web UI, or API, making the system highly accessible.</h4>
+                        </div>
+                        <div class="item">
+                            <h3>Maximized <span class="text-colored">Performance</span></h3>
+                            <h4>TACC incorporates state-of-the-art ML systems and network technologies from the academic sector, tailored for maximizing performance and scalability in AI applications.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <script src="assets/p5.min.js"></script>
+        <script src="assets/vanta.topology.min.js"></script>
+        <script>
+        VANTA.TOPOLOGY({
+          el: ".research",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 2.00,
+          scaleMobile: 1.00,
+          color: 0x9dc3f7,
+          backgroundColor: 0x0
+        })
+        </script>
+    </div>
 
     <footer class="section footer">
         <div class="container">
