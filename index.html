@@ -113,30 +113,8 @@
                     </div>
                 </div>
             </div>
-            <div class="columns level2">
-                <div class="column">
-                    <div class="columns is-flex-direction-column level2-l">
-                        <div class="column">
-                            <div class="card small">
-                                <h3>Image</h3>
-                                <h4>Pre-configured environments optimized for AI and machine learning tasks.</h4>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card small">
-                                <h3>Job</h3>
-                                <h4>Efficient task execution and management for large-scale workloads.</h4>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card small">
-                                <h3>Service</h3>
-                                <h4>Scalable backend services for AI infrastructure and operations.</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-half">
+            <div class="columns level2 is-justify-content-center">
+                <div class="column is-8">
                     <div class="arch">
                         <h3>SING Cloud Architecture</h3>
                         <h4>AI Cloud Interface</h4>
@@ -150,7 +128,10 @@
                         </div>             
                         <div class="columns is-mobile">
                             <div class="column">
-                                <div class="card">Image</div>
+                                <div class="card">
+                                    Image
+                                    <p>Pre-configured environments optimized for AI and machine learning tasks.</p>
+                                </div>
                             </div>
                             <div class="column">
                                 <div class="card">Job</div>
@@ -172,35 +153,11 @@
                         <h3></h3>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="columns is-flex-direction-column level2-r">
-                        <div class="column"><div class="card small">
-                            <h3>Cluster Job Scheduler</h3>
-                            <h4>Advanced job scheduling for optimized cluster resource utilization.</h4>
-                        </div></div>
-                        <div class="column"><div class="card small">
-                            <h3>Network Overlay</h3>
-                            <h4>Secure, high-performance virtual networking for cloud clusters.</h4>
-                        </div></div>
-                    </div>
-                </div>            
-            </div>
-            <div class="columns level3">
-                <div class="column"><div class="card small">
-                    <h3>AI-centric Networking</h3>
-                    <h4>Optimized network infrastructure designed for AI workloads.</h4>
-                </div></div>
-                <div class="column"><div class="card small">
-                    <h3>GPU Hardware</h3>
-                    <h4>High-performance and affordable GPUs for demanding AI applications.</h3>
-                </div></div>
-                <div class="column"><div class="card small">
-                    <h3>Unified Data Storage</h3>
-                    <h4>Centralized, scalable storage solution for AI and cloud data management.</h4>
-                </div></div>
+                    
             </div>
         </div>
         <script src="assets/vanta.net.min.js"></script>
+        <script src="assets/vanta.globe.min.js"></script>
         <script>
         VANTA.NET({
           el: ".cloud",
@@ -218,6 +175,20 @@
           spacing: 20.00
         })
         </script>
+        <script>
+            VANTA.GLOBE({
+              el: ".research",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              size: 0.5,
+              backgroundColor: 0x0
+            })
+            </script>
     </div>   
     
     <div class="section workflow" id="workflow">
@@ -265,6 +236,20 @@
                 </div>
             </div>
         </div>
+        <script>
+            VANTA.GLOBE({
+              el: ".workflow",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              size: 0.5,
+              backgroundColor: 0x0
+            })
+        </script>
     </div>
 
  
@@ -374,8 +359,8 @@
           gyroControls: false,
           minHeight: 200.00,
           minWidth: 200.00,
-          scale: 2.00,
-          scaleMobile: 1.00,
+          scale: 5.00,
+          scaleMobile: 5.00,
           color: 0x9dc3f7,
           backgroundColor: 0x0
         })
