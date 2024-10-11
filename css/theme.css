@@ -17,6 +17,8 @@ body, html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   height: 100vh;
+  background-color: black;
+  -webkit-font-smoothing: antialiased;
   --border-color: #000;
   --background-grey: #f9f9f9;
   --brand-color: #452D6C;

@@ -1,22 +1,46 @@
 .workflow {
 	background-color: black;
 	color: white;
+	margin-top: 6rem;
+}
+.workflow .section-header {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	text-align: center;
+	align-items: center;
 }
 .workflow h1 {
 	text-align: center;
-	font-size: 3rem;
+	font-size: 2.3rem;
+	line-height: 3rem;
+	margin-bottom: 1rem;
 	font-weight: bold;
-	margin-top: 8rem;
 }
 .workflow h2 {
+	width: 30rem;
 	text-align: center;
-	font-size: 1.8rem;
-	margin-bottom: 6rem;
+	font-size: 1.1rem;
+	color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 2rem;
 }
-
+.workflow .section-name {
+	margin-top: 8rem;
+	font-size: 1.2rem;
+	background-image: linear-gradient(309deg, rgb(166, 221, 255) 2.25225%, rgb(51, 194, 255) 48.0785%, rgb(0, 119, 255) 100%);
+	background-clip: text;
+	text-shadow: 0px 4px 18px rgba(0, 130, 217, .85);
+    text-align: center;
+	color: white;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+	width: fit-content;
+	margin: 0 auto;
+}
 .workflow .container .columns {
 	margin-top: 2rem;
 	gap: 2rem;
+	justify-content: center;
 }
 .workflow .frame {
 	height: 30rem;
@@ -26,24 +50,39 @@
 	position: relative;
 	opacity: 1;
 }
+.workflow .frame:after {
+    content: "";
+    border: 1px solid rgba(255,255,255,0.12);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
 .workflow .frame h3 {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: bold;
 	margin-left: 1rem;
 }
 .workflow .frame h4 {
 	font-size: 1rem;
 	margin: .5rem 0 1rem 1rem;
+	color: #c9c9c9;
+}
+.workflow .frame .images {
+	opacity: 0.88;
 }
 .workflow .frame img {
 	border-radius: .75rem;
 	max-width: none;
 	background-color: rgba(255,255,255,0.6);
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
-
 }
 .workflow .frame.frame-1 {
-	background-color: #dbeeff3d;
+	background-color: #202020;
 }
 .workflow .frame.frame-1 .images .a {
 	position: relative;
@@ -52,12 +91,12 @@
 .workflow .frame.frame-1 .images .b {
 	position: absolute;
 	top: 40%;
-	left: 80%;
+	left: 70%;
 	width: 40%;
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
 }
 .workflow .frame.frame-2 {
-	background-color: #fff7db3d;
+	background-color: #202020;
 }
 .workflow .frame.frame-2 .images .a {
 	position: relative;
@@ -72,7 +111,7 @@
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
 }
 .workflow .frame.frame-3 {
-	background-color: #fae6e63d;
+	background-color: #202020;
 }
 .workflow .frame.frame-3 .images .a {
 	position: relative;
@@ -81,13 +120,13 @@
 }
 .workflow .frame.frame-3 .images .b {
 	position: absolute;
-	top: 65%;
+	top: 60%;
 	left: 10%;
 	width: 100%;
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
 }
 .workflow .frame.frame-4 {
-	background-color: #dedbff3d;
+	background-color: #202020;
 }
 .workflow .frame.frame-4 h3, .workflow .frame.frame-4 h4 {
 	width: 20rem;
@@ -102,7 +141,7 @@
 .workflow .frame.frame-4 .images .b {
 	position: absolute;
 	top: 2rem;
-	left: calc(20rem + 5rem);
+	left: calc(20rem + 7rem);
 	width: 70%;
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
 	background-color: #f1f1f1;

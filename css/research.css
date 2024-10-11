@@ -1,20 +1,47 @@
 .research {
-	color: white;
 	background-color: black;
+	color: white;
+	margin-top: 6rem;
+}
+.research .section-header {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	text-align: center;
+	align-items: center;
+    margin-bottom: 6rem;
+    width: 80%;
 }
 .research h1 {
 	font-size: 2rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+.research h1.right {
+	align-self: flex-end;
+}
+.research .section-name {
+	margin-top: 8rem;
+	font-size: 1.2rem;
+	background-image: linear-gradient(309deg, rgb(166, 221, 255) 2.25225%, rgb(51, 194, 255) 48.0785%, rgb(0, 119, 255) 100%);
+	background-clip: text;
+	text-shadow: 0px 4px 18px rgba(0, 130, 217, .85);
+    text-align: center;
+	color: white;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+	width: fit-content;
+	margin: 0 auto;
 }
 .research h2 {
 	font-weight: bold;
-	font-size: 2.2rem;
+	font-size: 1.6rem;
 	margin-bottom: .5rem;
 }
 .research h2 + p {
+    font-size: .9rem
     margin-bottom: 1rem;
-    color: #303030
+    color: #c9c9c9; 
     padding-bottom: 1rem;
 }
 .research .columns.publication {
@@ -75,7 +102,7 @@
 	font-size: 1rem;
 }
 .research .item .item-author {
-    color: #f3f3f3;
+    color: #909090;
     font-size: .9rem;
 }
 .research .item .icon {
@@ -277,5 +304,5 @@
     z-index: 0;
 }
 .research .vanta-canvas {
-    opacity: 0.3;
+    opacity: 0.1;
 }
