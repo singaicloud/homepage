@@ -11,6 +11,10 @@
     <script>jQuery.noConflict();</script>
     <script src="./assets/lottie-player.js"></script>
     <script src="assets/three.min.js"></script>
+    <script src="assets/p5.min.js"></script>
+    <script src="assets/vanta.topology.min.js"></script>
+    <script src="assets/vanta.globe.min.js"></script>
+    <script src="assets/vanta.net.min.js"></script>
 
     <!-- TACC Theme Files -->
     <script src="js/theme.js"></script>
@@ -34,7 +38,7 @@
                 <div class="column has-text-centered">
                     <div class="columns is-mobile is-align-items-center items is-multiline">
                         <div class="column is-narrow item"><a href="#cloud">AI Compute</a></div>
-                        <div class="column is-narrow item"><a href="#workflow">AI Workflow</a></div>
+                        <div class="column is-narrow item"><a href="#workflow">AI Application</a></div>
                         <div class="column is-narrow item"><a href="#research">Research</a></div>   
                     </div>
                 </div>
@@ -63,9 +67,12 @@
                     <div class="t">Meet the Next-Gen AI Cloud</div>
                     <div class="r"></div>
                 </div>
-                <h1>Innovate. Build. Scale.</h1>
+                <div style="position:relative">
+                    <h1>Innovate. Build. Scale.</h1>
+                    <h1>Innovate. Build. Scale.</h1>
+                </div>
                 <h2>On SING Cloud, AI applications run smoother (and scale faster). <br>Effortless simplicity, fueled by cutting-edge research.</h2>
-                <div class="cta">Join the waitlist</div>
+                <div class="cta">Join the Waitlist</div>
             </div>
         </div>
     </section>
@@ -116,68 +123,84 @@
             <div class="columns level2 is-justify-content-center">
                 <div class="column is-8">
                     <div class="arch">
-                        <h3>SING Cloud Architecture</h3>
-                        <h4>AI Cloud Interface</h4>
+                        <div class="name">SING Cloud Architecture</div>
+                        <div class="name2">AI Cloud Interface</div>
                         <div class="columns is-mobile">
                             <div class="column">
-                                <div class="card">User Command Line & HTTP API</div>
-                            </div>
-                            <div class="column">
-                                <div class="card">Web Dashboard</div>
-                            </div>
-                        </div>             
-                        <div class="columns is-mobile">
-                            <div class="column">
-                                <div class="card">
-                                    Image
-                                    <p>Pre-configured environments optimized for AI and machine learning tasks.</p>
+                                <div class="component">
+                                    <div class="icon"><svg viewBox="0 0 32 32" id="svg1132013851"><path d="M 15 13 L 17 13 M 19 17 L 26 17 M 17 21 L 22 21 M 15 25 L 17 25 M 10 9 L 10 29 M 1 3 L 31 3 L 31 29 L 1 29 Z M 1 8 L 31 8" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/></svg></div>
+                                    <h3>User Command Line & HTTP API</h3>
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="card">Job</div>
+                                <div class="component">
+                                     <div class="icon"><svg viewBox="0 0 32 32" id="svg3136490575"><g transform="translate(2 2.999)" id="ss3136490575_1"><path d="M 0 3.501 L 7 7.001 L 14 3.501 M 7 7.001 L 7 15.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 14 3.501 L 7 0 L 0 3.501 L 0 12.001 L 7 15.501 L 14 12.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 14 3.501 L 21 7.001 L 28 3.501 M 21 7.001 L 21 15.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 28 3.501 L 21 0 L 14 3.501 L 14 12.001 L 21 15.501 L 28 12.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 7 15.501 L 14 19.001 L 21 15.501 M 14 19.001 L 14 27.501" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/><path d="M 21 15.501 L 14 12 L 7 15.501 L 7 24.001 L 14 27.501 L 21 24.001 Z" fill="transparent" stroke-width="1.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""/></g></svg></div>
+                                     <h3>Web Dashboard</h3>
+                                </div>
                             </div>
-                            <div class="column">
-                                <div class="card">Service</div>
-                            </div>
-                        </div>
-                        <h4>Global Resource Network</h4>
-                        <div class="columns is-mobile">
-                            <div class="column"><div class="card">Cluster Job Scheduler</div></div>
-                            <div class="column"><div class="card">Network Overlay</div></div>
                         </div>             
                         <div class="columns is-mobile">
-                            <div class="column"><div class="card">AI-centric Networking</div></div>
-                            <div class="column"><div class="card">GPU Hardware</div></div>
-                            <div class="column"><div class="card">Unified Data Storage</div></div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Image</h3>
+                                    <h4>Pre-configured environments optimized for AI and machine learning tasks.</h4>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Job</h3>
+                                    <h4>Efficient task execution and management for large-scale workloads.</h4>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Service</h3>
+                                    <h4>Scalable backend services for AI infrastructure and operations.</h4>
+                                </div>
+                            </div>
                         </div>
-                        <h3></h3>
+                        <div class="name2">Global Resource Network</div>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Cluster Job Scheduler</h3>
+                                    <h4>Advanced job scheduling to optimize resource utilization.</h4>
+                                </div>                            
+                            </div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Network Overlay</h3>
+                                    <h4>Secure, high-performance virtual networking for cloud clusters.</h4>    
+                                </div>                            
+                            </div>
+                        </div>             
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <div class="component">
+                                    <h3>AI-centric Networking</h3>
+                                    <h4>Optimized network infrastructure designed for AI workloads.</h4>
+                                </div>                            
+                            </div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>GPU Hardware</h3>
+                                    <h4>High-performance and affordable GPUs for demanding AI applications.</h3>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="component">
+                                    <h3>Unified Data Storage</h3>
+                                    <h4>Centralized, scalable storage solution for AI and cloud data management.</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                    
             </div>
         </div>
-        <script src="assets/vanta.net.min.js"></script>
-        <script src="assets/vanta.globe.min.js"></script>
         <script>
-        VANTA.NET({
-          el: ".cloud",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0x888888,
-          backgroundColor: 0x0,
-          points: 16.00,
-          maxDistance: 25.00,
-          spacing: 20.00
-        })
-        </script>
-        <script>
-            VANTA.GLOBE({
-              el: ".research",
+            VANTA.NET({
+              el: ".cloud",
               mouseControls: true,
               touchControls: true,
               gyroControls: false,
@@ -185,15 +208,39 @@
               minWidth: 200.00,
               scale: 1.00,
               scaleMobile: 1.00,
-              size: 0.5,
-              backgroundColor: 0x0
+              color: 0x888888,
+              backgroundColor: 0x0,
+              points: 16.00,
+              maxDistance: 25.00,
+              spacing: 20.00
             })
-            </script>
+        </script>
     </div>   
+
+    <div class="globe-3d">
+        <div class="wrapper">
+            <script>
+                VANTA.GLOBE({
+                  el: ".globe-3d .wrapper",
+                  mouseControls: true,
+                  touchControls: true,
+                  gyroControls: false,
+                  minHeight: 200.00,
+                  minWidth: 200.00,
+                  scale: 1.00,
+                  scaleMobile: 1.00,
+                  size: 0.80,
+                  backgroundColor: 0x0,
+                  color: 0xafafaf,
+                  color2: 0xafafaf,
+                })
+            </script>
+        </div>
+    </div>
     
     <div class="section workflow" id="workflow">
         <div class="section-header">
-            <div class="section-name">AI Workflow</div>
+            <div class="section-name">AI Application</div>
             <h1>Effortless AI App Development</h1>
             <h2>Visual workflows, agent tools, and user-friendly API, all in one place for fast AI integration.</h2>
         </div>
@@ -237,7 +284,7 @@
             </div>
         </div>
         <script>
-            VANTA.GLOBE({
+            VANTA.TOPOLOGY({
               el: ".workflow",
               mouseControls: true,
               touchControls: true,
@@ -251,7 +298,6 @@
             })
         </script>
     </div>
-
  
 
     <div class="section research" id="research">
@@ -349,21 +395,20 @@
                 </div>
             </div>        
         </div>
-        <script src="assets/p5.min.js"></script>
-        <script src="assets/vanta.topology.min.js"></script>
+
         <script>
-        VANTA.TOPOLOGY({
-          el: ".research",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 5.00,
-          scaleMobile: 5.00,
-          color: 0x9dc3f7,
-          backgroundColor: 0x0
-        })
+            VANTA.TOPOLOGY({
+              el: ".research",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 5.00,
+              scaleMobile: 5.00,
+              color: 0x9dc3f7,
+              backgroundColor: 0x0
+            })
         </script>
     </div>
 
@@ -371,16 +416,14 @@
         <div class="container">
             <div class="columns content">
                 <div class="column items is-3">
-                    <div class="item item-title">TACC Workflow</div>
-                    <div class="item">Launch & Monitor AI Jobs</div>
-                    <div class="item">Access Cloud Storage</div>
-                    <div class="item">Manage Code & Scripts</div>
-                </div>
+                    <div class="column is-narrow logo"><img src="assets/tacc-logo-white.png" /></div>
+                    <div class="column copyright is-narrow">© 2020–2024</div>
+                </div>                
                 <div class="column items is-3">
-                    <div class="item item-title">TACC Space</div>
-                    <div class="item">Latest Public Images</div>
-                    <div class="item">Public Dataset</div>
-                    <div class="item">Discussion Groups</div>
+                    <div class="item item-title">SING AI Cloud</div>
+                    <div class="item">AI Compute</div>
+                    <div class="item">AI Application</div>
+                    <div class="item">On-Premise Solution</div>
                 </div>
                 <div class="column items is-3">
                     <div class="item item-title">Research</div>
@@ -392,12 +435,7 @@
                     <div class="item item-title">Company</div>
                     <div class="item">Our Team</div>
                     <div class="item">Careers</div>
-                    <div class="item">HKUST iSING Lab</div>
                 </div>
-            </div>
-            <div class="columns is-align-items-center">
-                <div class="column is-narrow logo"><img src="assets/tacc-logo.png" /></div>
-                <div class="column copyright is-narrow"><span class="text-brand">星畅</span> © 2020–2024</div>
             </div>
         </div>
     </footer>

@@ -1,5 +1,4 @@
 .banner {
-  background-color: var(--background-grey);
   padding-top: 2rem;
   padding-bottom: 2rem;
   height: 52rem;
@@ -119,9 +118,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   --p: 0%;
-  background-image: radial-gradient(3em 3em at 50% 50%, transparent calc(var(--p) - 3em), #ffffff99 calc(var(--p) - 1em), #ffffff99 calc(var(--p) - .4em), transparent var(--p)), linear-gradient(0deg,#bad1f1 30%,#9dc3f7 100%);
+  background-image: radial-gradient(2em 2em at 50% 50%, transparent calc(var(--p) - 2em), #fff calc(var(--p) - 1em), #fff calc(var(--p) - .4em), transparent var(--p)), linear-gradient(0deg, #bad1f1 30%, #9dc3f7 100%);
   animation: shiny 8s linear 1.2s infinite;
   text-shadow: 0 2px 16px rgba(174,207,242,.24);
+}
+.headline h1+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-shadow: 0 2px 16px rgba(174, 207, 242, .24);
+  filter: blur(16px) opacity(.4);
 }
 .headline h2 {
   color: rgba(240, 249, 255, 0.7);
@@ -131,22 +138,25 @@
   font-size: 1.3rem;
 }
 .headline .cta {
-  color: white;
-  background-color: rgba(47, 128, 237, 0.5);
-  box-shadow: rgb(90, 165, 250) 0px 0px 0px 1px inset;
-  border-radius: 4px;
-  padding: 6px 8px;
-  width: 10rem;
+  color: black;
+  background-color: white;
+  backdrop-filter: blur(0px);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 1.80656px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 6.8656px -2.5px, rgba(0, 0, 0, 0.063) 0px 10px 30px -3.75px;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: fit-content;
   margin: 0 auto;
   margin-top: 3rem;
   cursor: default;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 .headline .cta:hover {
-  background-color: rgba(47, 128, 237);
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .25s;
-
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color, color;
+  transition-duration: .3s;
 }
 
 canvas#particleCanvas {

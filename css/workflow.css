@@ -1,5 +1,4 @@
 .workflow {
-	background-color: black;
 	color: white;
 	margin-top: 6rem;
 }
@@ -147,5 +146,20 @@
 	background-color: #f1f1f1;
 }
 .workflow .vanta-canvas {
-    opacity: 0.5;
+    opacity: 0.1;
+}
+.globe-3d {
+	overflow: visible;
+	position: relative;
+	top: -500px;
+	left: -25%;
+	width: 150%;
+	height: 1px;
+}
+.globe-3d .wrapper {
+	overflow: visible;
+	height: 1000px;
+	width: 100%;
+	position: absolute;
+	opacity: 0.4;
 }

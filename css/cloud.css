@@ -1,5 +1,4 @@
 .cloud {
-	background-color: black;
 	color: white;
 	margin-top: 6rem;
 }
@@ -106,8 +105,8 @@
 	opacity: 0.7;
 	height: 10rem;
 }
-.cloud .level2-l>.column .card, .cloud .level2-r>.column .card {
-	height: 100%;
+.cloud .level2 {
+ 	margin-top: 2rem;
 }
 .cloud .level2>.column {
 	display: flex;
@@ -124,19 +123,38 @@
     justify-content: center;
     padding: 1rem 1.5rem;
 	background-image: radial-gradient(100% 100% at top, rgba(157, 195, 247, .1), rgba(157, 195, 247, 0));
-	background-color: rgb(6, 45, 122);
+	background-color: #5c5c5c1f;
 	border-radius: 1.5rem;
 }
-.cloud .arch .card {
+.cloud .arch .component {
 	padding: 1rem;
 	text-align: center;
+	border-radius: 1rem;
+	border: 1px solid #bad7f72d;
+	background-color: #0f0f0f;
+	cursor: default;
 }
-.cloud .arch h3 {
+.cloud .arch .component:hover {
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+	transition-duration: 0.5s;
+	background-color: #00000000;
+	transition-property: box-shadow, background-color;
+}
+.cloud .arch .component h3 {
+	font-weight: bold;
+}
+.cloud .arch .component h4 {
+	font-size: 0.8rem;
+	margin-top: .5rem;
+	color: #9d9d9d;
+}
+.cloud .arch .name {
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.6rem;
 }
-.cloud .arch h4 {
+.cloud .arch .name2 {
+	font-size: 1.2rem;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 1rem;

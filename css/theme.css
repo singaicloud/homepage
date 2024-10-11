@@ -136,14 +136,15 @@ a:hover {
   padding-top: 1rem;
   padding-bottom: 2rem;
   letter-spacing: .0025em;
-  background-color: #f9f9f9!important;
+  background-color: black;
+  color: white;
 }
 .footer .content {
   font-size: .85rem;
   margin-bottom: 2rem;
 }
 .footer .logo {
-  padding-top: 18px;
+  padding-top: 1rem;
   margin-right: -10px;
 }
 .footer .logo img{
@@ -151,10 +152,12 @@ a:hover {
 }
 .footer .item {
   margin-top: 1rem;
+  opacity: 0.5;
 }
 .footer .item-title {
   font-weight: 600;
-  color: #616161;
+  color: white;
+  opacity: 1;
 }
 .footer .copyright {
   font-size: 0.8rem;
