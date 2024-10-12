@@ -1,5 +1,5 @@
 function topo(cnv){
-    let sketch = function(p) {
+    const sketch = (cnv) => (function(p) {
       let width = cnv.offsetWidth;
       let height = cnv.offsetHeight;
       let offset = 100;
@@ -130,11 +130,12 @@ function topo(cnv){
       function mod(x, n) {
         return (x % n + n) % n;
       }
-    };
-    new p5(sketch);
+    });
+    new p5(sketch(cnv));
 }
 
-/* Dynamic background from Vanta */
+/* Dynamic background */
+
 window.addEventListener("load", () => {
     /* Partical Cloud */
     const canvasEl = document.getElementById('particleCanvas');
@@ -250,8 +251,8 @@ window.addEventListener("load", () => {
     /* Vanta backgrounds */
     jQuery.getScript("assets/three.min.js", ()=>{
         jQuery.getScript("assets/vanta.topology.min.js", ()=>{
-            const cnv = document.getElementById("topologyCanvas");
-            topo(cnv);
+            const cv = document.getElementById("topologyCanvas");
+            topo(cv);            
         });
         jQuery.getScript("assets/vanta.net.min.js", ()=>{
             VANTA.NET({

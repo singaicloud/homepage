@@ -1,19 +1,28 @@
 .banner {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  height: 52rem;
   background: black;
   position: relative;
   background-color: #000;
+  margin-bottom: 20rem;
 }
 .spotlight svg {
   position: absolute;
   z-index: 1000;
   opacity: 0;
-  left: 20rem;
+  top: 10%;
+  left: 18%;
   height: 100%;
   pointer-events: none;
   animation: spotlight 15s ease 1s 1 forwards;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    margin-bottom: 10rem;
+  }
+  .spotlight svg {
+    left: 5%;
+  }
 }
 @keyframes spotlight {
   0% {
@@ -45,10 +54,12 @@
   margin-top: 6.8rem;
   justify-content: center;
   transform: perspective(900px) rotate3D(1, 0, 0, 30deg) translate(0px, -200px);
+  max-width: inherit;
 }
 .chess #board {
   position: relative;
-  width: 800px;
+  width: 80%;
+  max-width: 800px;
 }
 .chess img {
   opacity: 0.3;
@@ -59,7 +70,19 @@
 .chess.active .piece-417db {
   opacity: 1!important;
 }
-
+@media screen and (max-width: 768px) {
+  .chess {
+    margin-top: 10rem;
+  }
+  .chess #board {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .chess {
+    margin-top: 20rem;
+  }
+}
 @keyframes shiny {
   0% {
       --p: 0%
@@ -132,10 +155,25 @@
 }
 .headline h2 {
   color: rgba(240, 249, 255, 0.7);
-  width: 50rem;
   margin: 0 auto;
+  max-width: 40rem;
   margin-top: 1rem;
   font-size: 1.3rem;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .headline .line .l, .headline .line .r {
+    width: 3rem;
+  }
+  .headline h1 {
+    font-size: 2.2rem;
+  }
+  .headline .line .t {
+    font-size: .9rem;
+  }
+  .headline h2 { 
+    font-size: .9rem;
+  }
 }
 .headline .cta {
   color: black;
@@ -157,6 +195,12 @@
   background-color: rgba(255, 255, 255, 0.1);
   transition-property: background-color, color;
   transition-duration: .3s;
+}
+@media screen and (max-width: 768px) {
+  .headline .cta { 
+    font-size: .9rem;
+    padding: 8px 16px;
+  }
 }
 canvas#particleCanvas {
   position: absolute; 

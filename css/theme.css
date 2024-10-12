@@ -75,6 +75,8 @@ a:hover {
 .section {
   scroll-margin-top: 65px;
   position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .section.content {
   padding-top: 2rem;
@@ -165,7 +167,7 @@ a:hover {
 }
 
 /* animations */
-#topologyCanvas {
+.bgCanvas {
     top: 0;
     left: 0;
     opacity: 0.5;

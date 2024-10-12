@@ -17,7 +17,7 @@
 	font-weight: bold;
 }
 .cloud h2 {
-	width: 30rem;
+	max-width: 30rem;
 	text-align: center;
 	font-size: 1.1rem;
 	color: rgba(255, 255, 255, 0.6);
@@ -35,6 +35,17 @@
 	font-weight: bold;
 	width: fit-content;
 	margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+	.cloud .section-name { font-size: 1rem; }
+	.cloud h1 {
+	  	font-size: 1.6rem;
+	  	line-height: 2rem;
+	  	margin-top: .3rem;
+	 }	
+	 .cloud h2 {
+	  	font-size: .9rem;
+	 }
 }
 .cloud .features .card {
 	box-shadow: 0 0 0 1px #bad7f72d;
@@ -54,6 +65,21 @@
 }
 .cloud .features .card h4 {
 	font-size: 1rem;
+	color: #C9C9C9;
+}
+@media screen and (max-width: 768px) {
+	.cloud .features .card {
+		padding: 1rem;
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.cloud .features .card h3 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	.cloud .features .card h4 {
+		font-size: .9rem;
+	}
 }
 .cloud .card1,  .cloud .card2 {
 	height: 30rem;
