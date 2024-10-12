@@ -1,9 +1,13 @@
 // Wait for the DOM to be fully loaded before executing code
 document.addEventListener('DOMContentLoaded', () => {
-    let board = null; // Initialize the chessboard
-    const game = new Chess(); // Create new Chess.js game instance
-    let userColor = 'w'; // Initialize the user's color as white
+    var game = null;
+    let board = null; 
 
+    jQuery.getScript("assets/chess/chess.min.js", ()=>{
+        game = new Chess(); 
+    });
+
+    let userColor = 'w'; // Initialize the user's color as white
     var globalSum = 0; // always from black's perspective. Negative for white's perspective.
     var weights = { p: 100, n: 280, b: 320, r: 479, q: 929, k: 60000, k_e: 60000 };
     var pst_w = {
@@ -242,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Initialize the chessboard
-    board = Chessboard('board', boardConfig);
-
+    jQuery.getScript("assets/chess/chessboard-1.0.0.min.js", ()=>{
+        board = Chessboard('board', boardConfig);
+    })
 });
