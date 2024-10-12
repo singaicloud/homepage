@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SING Cloud | Next-Gen AI Cloud | Scalable AI Infrastructure Designed for Evolving Machine Learning Research</title>
     
-    <!-- CSS and JS Libraries-->
+    
     <link rel="stylesheet" href="assets/bulma.min.css">
-    <script src="assets/jquery-3.7.1.min.js"></script>
-    <script>jQuery.noConflict();</script>
-    <script src="./assets/lottie-player.js"></script>
-    <script src="assets/three.min.js"></script>
-    <script src="assets/p5.min.js"></script>
-    <script src="assets/vanta.topology.min.js"></script>
-    <script src="assets/vanta.globe.min.js"></script>
-    <script src="assets/vanta.net.min.js"></script>
+    
+    <script defer src="assets/lottie-player.js"></script>
+
+    <script defer src="assets/three.min.js"></script>
+    <script defer src="assets/p5.min.js"></script>
+    <script defer src="assets/vanta.topology.min.js"></script>
+    <script defer src="assets/vanta.globe.min.js"></script>
+    <script defer src="assets/vanta.net.min.js"></script>
+    <script defer src="js/animations.js"></script>
+
+    <script defer src="assets/jquery-3.7.1.min.js"></script>
+    <link href="assets/chess/chessboard-1.0.0.css" rel="stylesheet">
+    <script defer src="assets/chess/chess.min.js"></script>
+    <script defer src="assets/chess/chessboard-1.0.0.min.js"></script>
+    <script defer src="js/chess.js"></script>
 
     <!-- TACC Theme Files -->
-    <script src="js/theme.js"></script>
     <link href="css/theme.css" rel="stylesheet">
     <link href="css/research.css" rel="stylesheet">
     <link href="css/banner.css" rel="stylesheet">
     <link href="css/workflow.css" rel="stylesheet">
     <link href="css/cloud.css" rel="stylesheet">
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/99d5980073.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="menubar">
@@ -51,15 +51,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none"><g filter="url(#filter)"><ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="#9dc3f7" fill-opacity="0.21"></ellipse></g><defs><filter id="filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur_1065_8"></feGaussianBlur></filter></defs></svg>
         </div>
         <canvas id="particleCanvas"></canvas>
-        <script src="js/particles.js"></script>
                     
         <div class="container">
             <div class="chess">
                 <div id="board"></div>
-                <link href="assets/chess/chessboard-1.0.0.css" rel="stylesheet">
-                <script src="assets/chess/chess.min.js"></script>
-                <script src="assets/chess/chessboard-1.0.0.min.js"></script>
-                <script src="js/chess.js"></script>
+
             </div>
             <div class="headline">
                 <div class="line">
@@ -198,45 +194,9 @@
                 </div>
             </div>
         </div>
-        <script>
-            VANTA.NET({
-              el: ".cloud",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0x888888,
-              backgroundColor: 0x0,
-              points: 16.00,
-              maxDistance: 25.00,
-              spacing: 20.00
-            })
-        </script>
     </div>   
 
-    <div class="globe-3d">
-        <div class="wrapper">
-            <script>
-                VANTA.GLOBE({
-                  el: ".globe-3d .wrapper",
-                  mouseControls: true,
-                  touchControls: true,
-                  gyroControls: false,
-                  minHeight: 200.00,
-                  minWidth: 200.00,
-                  scale: 1.00,
-                  scaleMobile: 1.00,
-                  size: 0.80,
-                  backgroundColor: 0x0,
-                  color: 0xafafaf,
-                  color2: 0xafafaf,
-                })
-            </script>
-        </div>
-    </div>
+    <div class="globe-3d"><div class="wrapper"></div></div>
     
     <div class="section workflow" id="workflow">
         <div class="section-header">
@@ -283,20 +243,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            VANTA.TOPOLOGY({
-              el: ".workflow",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              size: 0.5,
-              backgroundColor: 0x0
-            })
-        </script>
     </div>
  
 
@@ -395,21 +341,6 @@
                 </div>
             </div>        
         </div>
-
-        <script>
-            VANTA.TOPOLOGY({
-              el: ".research",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 5.00,
-              scaleMobile: 5.00,
-              color: 0x9dc3f7,
-              backgroundColor: 0x0
-            })
-        </script>
     </div>
 
     <footer class="section footer">

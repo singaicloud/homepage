@@ -158,7 +158,6 @@
   transition-property: background-color, color;
   transition-duration: .3s;
 }
-
 canvas#particleCanvas {
   position: absolute; 
   top: 0;
