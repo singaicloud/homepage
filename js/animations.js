@@ -1,59 +1,5 @@
 /* Dynamic background from Vanta */
 window.addEventListener("load", () => {
-    VANTA.NET({
-        el: ".cloud",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x888888,
-        backgroundColor: 0x0,
-        points: 16.00,
-        maxDistance: 25.00,
-        spacing: 20.00
-    })
-    VANTA.GLOBE({
-        el: ".globe-3d .wrapper",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        size: 0.80,
-        backgroundColor: 0x0,
-        color: 0xafafaf,
-        color2: 0xafafaf,
-    })
-    VANTA.TOPOLOGY({
-        el: ".workflow",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        size: 0.5,
-        backgroundColor: 0x0
-    })
-    VANTA.TOPOLOGY({
-        el: ".research",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 5.00,
-        scaleMobile: 5.00,
-        color: 0x9dc3f7,
-        backgroundColor: 0x0
-    })
-
     /* Partical Cloud */
 	const canvas = document.getElementById('particleCanvas');
 	const ctx = canvas.getContext('2d');
@@ -147,4 +93,6 @@ window.addEventListener("load", () => {
       canvas: document.getElementById("cloud-cli1"),
       src: "assets/cloud-cli1.lottie",
     });
+
+
 });
