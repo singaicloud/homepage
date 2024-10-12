@@ -1,5 +1,5 @@
 /* Dynamic background from Vanta */
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
     VANTA.NET({
         el: ".cloud",
         mouseControls: true,
@@ -53,10 +53,8 @@ window.addEventListener("load", (event) => {
         color: 0x9dc3f7,
         backgroundColor: 0x0
     })
-});
 
-/* Particle Cloud */
-document.addEventListener('load', () => {
+    /* Partical Cloud */
 	const canvas = document.getElementById('particleCanvas');
 	const ctx = canvas.getContext('2d');
 
@@ -141,4 +139,12 @@ document.addEventListener('load', () => {
 
 	initParticles();
 	animate();
+
+	/* Dot Lottie */
+    var dl = new DotLottie({
+      autoplay: true,
+      loop: true,
+      canvas: document.getElementById("cloud-cli1"),
+      src: "assets/cloud-cli1.lottie",
+    });
 });

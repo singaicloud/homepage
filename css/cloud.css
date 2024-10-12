@@ -69,11 +69,16 @@
 }
 .cloud .card1 .images>* {
 	position: absolute;
-	box-shadow: -10px 0 30px #b0b0b024, -.5px -.5px 0 .4px #8f8f8f40;
+	box-shadow: -10px 0 30px #b0b0b024, 0 0 0 1px #8f8f8f40;
 }
 .cloud .card1 .img1 {
 	width: 70%;
 	top: 0%;	
+	aspect-ratio: 1.5;
+}
+.cloud .card1 .img1 canvas {
+	width: 100%;	
+	aspect-ratio: 1.5;
 }
 .cloud .card1 .img2 {
 	width: 120%;
