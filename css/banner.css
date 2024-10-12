@@ -60,6 +60,7 @@
   position: relative;
   width: 80%;
   max-width: 800px;
+  touch-action: none;
 }
 .chess img {
   opacity: 0.3;
@@ -69,6 +70,10 @@
 }
 .chess.active .piece-417db {
   opacity: 1!important;
+  touch-action: none;
+}
+.piece-417db {
+  touch-action: none;
 }
 @media screen and (max-width: 768px) {
   .chess {
