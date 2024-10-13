@@ -59,6 +59,7 @@
 	overflow: hidden;
 	position: relative;
 	opacity: 1;
+	background: radial-gradient(128% 107% at 0% 0%, #292929 0%, rgb(0, 0, 0) 77.6%);
 }
 .workflow .frame:after {
     content: "";

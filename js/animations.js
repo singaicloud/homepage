@@ -118,9 +118,8 @@ window.addEventListener("load", () => {
 
     /* Vanta backgrounds */
     jQuery.getScript("assets/three.min.js", () => {
-        jQuery.getScript("assets/vanta.topology.min.js", () => {
-            const cnv = document.getElementById("topologyCanvas");
-            const sketch = function(p) {
+        const sketch = function(p) {
+                let cnv = document.getElementById("topologyCanvas");
                 let width = cnv.offsetWidth;
                 let height = cnv.offsetHeight;
                 let offset = 100;
@@ -146,7 +145,7 @@ window.addEventListener("load", () => {
                     p.smooth();
                     p.noStroke();
                     //p.blendMode(p.OVERLAY);
-                    p.frameRate(20);
+                    p.frameRate(60);
                     init_particles();
                     init_flow();
                 };
@@ -243,7 +242,7 @@ window.addEventListener("load", () => {
 
                 function display_particles() {
                     p.strokeWeight(1);
-                    p.stroke(255, 255, 255, 5);
+                    p.stroke(44, 127, 209, 5);
                     for (let i = 0; i < particles.length; i++) {
                         if (p5.Vector.dist(particles[i].prev, particles[i].pos) < 10)
                             p.line(particles[i].prev.x, particles[i].prev.y, particles[i].pos.x, particles[i].pos.y);
@@ -254,8 +253,10 @@ window.addEventListener("load", () => {
                     return (x % n + n) % n;
                 }
             };
-            new p5(sketch);
-        });
+
+        // topo
+        new p5(sketch);
+
         jQuery.getScript("assets/vanta.net.min.js", () => {
             VANTA.NET({
                 el: ".cloud",

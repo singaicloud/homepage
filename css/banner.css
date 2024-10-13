@@ -181,26 +181,11 @@
   }
 }
 .headline .cta {
-  color: black;
-  background-color: white;
-  backdrop-filter: blur(0px);
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 1.80656px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 6.8656px -2.5px, rgba(0, 0, 0, 0.063) 0px 10px 30px -3.75px;
-  opacity: 1;
-  border-radius: 10px;
-  padding: 10px 20px;
-  width: fit-content;
   margin: 0 auto;
   margin-top: 3rem;
-  cursor: default;
-  font-weight: bold;
-  font-size: 1.1rem;
+  scroll-margin-top: 600px;
 }
-.headline .cta:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition-property: background-color, color;
-  transition-duration: .3s;
-}
+
 .headline .waitlist-form {
   display: flex;
   align-items: center;
@@ -254,12 +239,6 @@
 }
 .headline .waitlist input:hover {
   border: none;
-}
-@media screen and (max-width: 768px) {
-  .headline .cta { 
-    font-size: .9rem;
-    padding: 8px 16px;
-  }
 }
 canvas#particleCanvas {
   position: absolute; 

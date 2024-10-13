@@ -12,7 +12,7 @@
   src: url("../assets/openai-500.otf");
 }
 body, html {
-  font-family: "OpenAI", "IBM Plex Sans", sans-serif !important;
+  font-family: "OpenAI", sans-serif !important;
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -24,53 +24,41 @@ body, html {
   --brand-color: #452D6C;
 }
 input, select, textarea {
-  font-family: "OpenAI", "IBM Plex Sans", sans-serif !important;
-}
-
-a:hover {
-  border-bottom: 1px solid black;
+  font-family: "OpenAI", sans-serif !important;
 }
 .text-colored, .text-brand{
   background-image: linear-gradient(90deg,#9b5cff 0,#ee5396);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.text-brand {
-  font-weight: bold;
-}
 .text-underlined {
   border-bottom: 1px solid black;
 }
 .button {
-  font-size: 0.8rem;
-  line-height: 2rem;
-  padding: 8px 16px;
-  border: 1px solid black!important;
-  color: #080808 !important;
-  background-color: #fff !important;
+  color: black;
+  background-color: white;
+  backdrop-filter: blur(0px);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 1.80656px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 6.8656px -2.5px, rgba(0, 0, 0, 0.063) 0px 10px 30px -3.75px;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: fit-content;
+  cursor: default;
   font-weight: bold;
-  border: 1px solid #080808;
-  cursor: pointer;
-  border-radius: 3px;
+  font-size: 1.1rem;
+  border: none;
 }
 .button:hover {
-  background-color: #080808!important;
-  color: #fff !important;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color, color;
+  transition-duration: .3s;
 }
-.button.primary {
-  background-color: #452d69 !important;
-  border: 1px solid black;
-  color: white !important;
-  font-size: 1rem;
-  background-color: white;
-}
-
-.button.primary:hover {
-  background-color: white !important;
-  border: 1px solid #452d69;
-  color: #452d69 !important;
-  font-size: 1rem;
-  background-color: white;
+@media screen and (max-width: 768px) {
+  .headline .cta { 
+    font-size: .9rem;
+    padding: 8px 16px;
+  }
 }
 .section {
   scroll-margin-top: 65px;
@@ -133,48 +121,65 @@ a:hover {
   }
 }
 
+.finale {
+  margin-bottom: 5rem;
+}
+.finale .button {
+  margin-top: 2rem;
+}
+.finale h1 {
+  margin-top: 2rem;
+  font-size: 3.6rem;
+  line-height: 4rem;
+  color: white;
+  font-weight: bold;
+}
 .footer {
   position: sticky;
   top: 100%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: 1rem 2rem 4rem 2rem;
   letter-spacing: .0025em;
   background-color: black;
   color: white;
-}
-.footer .content {
-  font-size: .85rem;
-  margin-bottom: 2rem;
+  font-size: .9rem;
 }
 .footer .logo {
   padding-top: 1rem;
-  margin-right: -10px;
 }
-.footer .logo img{
-  width: 140px
+.footer .logo img {
+  width: 160px;
+}
+.footer .logo .slogan {
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
 }
 .footer .item {
   margin-top: 1rem;
-  opacity: 0.5;
+}
+.footer .item a {
+  color: #a6a6a6!important;
 }
 .footer .item-title {
   font-weight: 600;
   color: white;
   opacity: 1;
 }
-.footer .copyright {
-  font-size: 0.8rem;
+.footer .nav {
+  margin-left: auto;
 }
 
 /* animations */
 .bgCanvas {
     top: 0;
     left: 0;
-    opacity: 0.2;
+    opacity: .8;
     position: absolute;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0, 1) 50%, rgb(0, 0, 0, 1) 100%);
 }
 .cloud .vanta-canvas {
     opacity: 0.4;
@@ -195,7 +200,7 @@ a:hover {
   height: 1000px;
   width: 100%;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 @media screen and (max-width: 768px) {
   .globe-3d {

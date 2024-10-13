@@ -60,7 +60,7 @@
                 </div>
                 <h2>On SING Cloud, AI applications run smoother and scale faster. Effortless simplicity, fueled by cutting-edge research.</h2>
                 
-                <div class="cta">Join the Waitlist</div>
+                <div class="cta button" id="cta">Join the Waitlist</div>
                 <div class="waitlist-form" style="display: none">
                     <div class="waitlist">
                         <input type="email" placeholder="your_email@example.com"/>
@@ -245,7 +245,6 @@
  
 
     <div class="section research" id="research">
-        <canvas class="bgCanvas" id="topologyCanvas"></canvas>
         <div class="container"> 
             <div class="section-header">
                 <div class="section-name">Research & Solution</div>
@@ -347,28 +346,31 @@
     </div>
 
     <footer class="section footer">
+        <canvas class="bgCanvas" id="topologyCanvas"></canvas>
         <div class="container">
-            <div class="columns content">
-                <div class="column items is-3">
-                    <div class="column is-narrow logo"><img src="assets/tacc-logo-white.png" /></div>
-                    <div class="column copyright is-narrow">© 2020–2024</div>
-                </div>                
-                <div class="column items is-3">
-                    <div class="item item-title">SING AI Cloud</div>
-                    <div class="item">AI Compute</div>
-                    <div class="item">AI Application</div>
-                    <div class="item">On-Premise Solution</div>
+            <div class="finale">
+                <h1>Compute Different.</h1>
+                <a href="#cta" class="button">Join Us</a>
+            </div>
+            <div class="columns">
+                <div class="column logo items is-6">
+                    <div><img src="assets/tacc-logo-white.png" /></div>
+                    <div class="slogan is-narrow">The Next-Gen AI Cloud</div>
                 </div>
-                <div class="column items is-3">
-                    <div class="item item-title">Research</div>
-                    <div class="item">AI-centric Networking</div>
-                    <div class="item">Machine Learning Systems</div>
-                    <div class="item">Cluster Resource Scheduling</div>
-                </div>
-                <div class="column items is-3">
-                    <div class="item item-title">Company</div>
-                    <div class="item">Our Team</div>
-                    <div class="item">Careers</div>
+                <div class="column nav is-6">    
+                    <div class="columns is-mobile">     
+                        <div class="column items is-6">
+                            <div class="item item-title">SING AI Cloud</div>
+                            <div class="item"><a href="#cloud">AI Compute</a></div>
+                            <div class="item"><a href="#workflow">AI Application</a></div>
+                            <div class="item"><a href="#research">Research & Solution</a></div>
+                        </div>
+                        <div class="column items is-6">
+                            <div class="item item-title">Company</div>
+                            <div class="item"><a href="https://ising.cse.ust.hk/" target="_blank">Our Team</a></div>
+                            <div class="item"><a href="#research">Careers</a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
