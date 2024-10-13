@@ -141,6 +141,36 @@
 	height: 10rem;
 }
 @media screen and (max-width: 768px) {
+	.cloud .card1,  .cloud .card2 {
+		height: 25rem;
+	}
+	.cloud .card1 .img1 {
+		width: 100%;
+	}
+	.cloud .card1 .img2 {
+		width: 130%;
+	}
+	.cloud .card1 .img3 {
+		width: 120%;
+	}
+	.cloud .card2 .images {
+		position: relative;
+		width: 200%;
+		top: 10%;
+		left: -30%;
+		gap: .4rem;
+	}	
+	.cloud .card2 .images div {
+		display: none;
+	}
+	.cloud .card2 .images>img {
+		box-shadow: -10px 0 30px #938dff24, -.5px -.5px 0 .4px #8f8f8f40;
+		border-radius: .25rem;
+		opacity: 0.7;
+		width: 48%;
+		height: auto;
+		aspect-ratio: 2;
+	}
 	.cloud .columns.level1 .column  {
  		padding: .25rem;
 	}
@@ -173,11 +203,12 @@
 	border: 1px solid #bad7f72d;
 	background-color: #0f0f0f;
 	cursor: default;
+	height: 100%;
 }
 .cloud .arch .component:hover {
 	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+	background-color: #1a1a1a;
 	transition-duration: 0.5s;
-	background-color: #00000000;
 	transition-property: box-shadow, background-color;
 }
 .cloud .arch .component h3 {
@@ -194,12 +225,26 @@
 	font-size: 1.6rem;
 }
 .cloud .arch .name2 {
+	color: #80b5e2;
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
-.cloud .vanta-canvas {
-	opacity: 0.6;
+@media screen and (max-width: 768px) {
+	.cloud .columns.level1 .column  {
+ 		padding: .25rem;
+	}
+	.cloud .arch {
+		padding: 0;
+		background-image: none;
+	}
+	.cloud .arch .component {
+		padding: 1rem .5rem;
+		background-color: #20202080;
+	}	
+	.cloud .arch .column {
+		padding: .4rem;
+	}
 }

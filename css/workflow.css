@@ -17,7 +17,7 @@
 	font-weight: bold;
 }
 .workflow h2 {
-	width: 30rem;
+	max-width: 30rem;
 	text-align: center;
 	font-size: 1.1rem;
 	color: rgba(255, 255, 255, 0.6);
@@ -35,6 +35,17 @@
 	font-weight: bold;
 	width: fit-content;
 	margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+	.workflow .section-name { font-size: 1rem; }
+	.workflow h1 {
+	  	font-size: 1.6rem;
+	  	line-height: 2rem;
+	  	margin-top: .3rem;
+	 }	
+	 .workflow h2 {
+	  	font-size: .9rem;
+	 }
 }
 .workflow .container .columns {
 	margin-top: 2rem;
@@ -70,6 +81,7 @@
 	font-size: 1rem;
 	margin: .5rem 0 1rem 1rem;
 	color: #c9c9c9;
+	max-width: 30rem;
 }
 .workflow .frame .images {
 	opacity: 0.88;
@@ -79,6 +91,31 @@
 	max-width: none;
 	background-color: rgba(255,255,255,0.6);
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
+}
+@media screen and (max-width: 768px) {
+	.workflow .container .columns {
+		margin-left: -.25rem;
+		margin-right: -.25rem;
+		margin-top: .5rem;
+	}
+	.workflow .frame {
+		padding: 1rem .75rem;
+		height: 20rem;
+	}
+	.workflow .frame img {
+		border-radius: .25rem;
+	}
+	.workflow .container .columns {
+		gap: .5rem;
+	}
+	.workflow .frame h3 {
+		font-size: .9rem;
+		margin-left: 0;
+	}
+	.workflow .frame h4 {
+		font-size: .8rem;
+		margin-left: 0;
+	}
 }
 .workflow .frame.frame-1 {
 	background-color: #202020;
@@ -129,7 +166,7 @@
 	background-color: #202020;
 }
 .workflow .frame.frame-4 h3, .workflow .frame.frame-4 h4 {
-	width: 20rem;
+	max-width: 20rem;
 }
 .workflow .frame.frame-4 .images .a {
 	position: relative;
@@ -146,21 +183,43 @@
 	box-shadow: 0 4px 4px -2px #10182808, 0 10px 12px -2px #10182814;
 	background-color: #f1f1f1;
 }
-.workflow .vanta-canvas {
-    opacity: 0.2;
-}
-.globe-3d {
-	overflow: visible;
-	position: relative;
-	top: -500px;
-	left: -25%;
-	width: 150%;
-	height: 1px;
-}
-.globe-3d .wrapper {
-	overflow: visible;
-	height: 1000px;
-	width: 100%;
-	position: absolute;
-	opacity: 0.4;
+@media screen and (max-width: 768px) {
+	.workflow .frame .images {
+		position: relative;
+	}	
+	.workflow .frame.frame-1 .images .a {
+		left: -50%;
+	}
+	.workflow .frame.frame-1 .images .b {
+		top: 20%;
+		left: 60%;
+		width: 50%;
+	}	
+	.workflow .frame.frame-2 .images .a {
+		width: 180%;
+		left: 50%;
+		z-index: 10;
+	}
+	.workflow .frame.frame-2 .images .b {
+		top: 0;
+		left: 0;
+		width: 80%;
+	}
+	.workflow .frame.frame-3 .images .a {
+		width: 160%;
+	}
+	.workflow .frame.frame-3 .images .b {
+		top: 120%;
+	}
+	.workflow .frame.frame-4 .images .a {
+		position: relative;
+		width: 100%;
+		left: 0rem;
+		top: 0rem;
+	}
+	.workflow .frame.frame-4 .images .b {
+		position: absolute;
+        top: 5rem;
+        left: 60%;
+	}
 }
