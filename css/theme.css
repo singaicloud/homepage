@@ -45,7 +45,6 @@ input, select, textarea {
   width: fit-content;
   cursor: default;
   font-weight: bold;
-  font-size: 1.1rem;
   border: none;
 }
 .button:hover {
@@ -123,6 +122,7 @@ input, select, textarea {
 
 .finale {
   margin-bottom: 5rem;
+  opacity: 0.8;
 }
 .finale .button {
   margin-top: 2rem;
@@ -168,6 +168,11 @@ input, select, textarea {
 }
 .footer .nav {
   margin-left: auto;
+}
+@media screen and (max-width: 768px){
+  .finale h1 {
+    font-size: 3rem;
+  }
 }
 
 /* animations */

@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to handle the start of a drag position
     const onDragStart = (source, piece) => {
         // Allow the user to drag only their own pieces based on color
-        jQuery(".headline").css('visibility', 'hidden')
+        jQuery(".headline").css('visibility', 'hidden');
         jQuery(".chess").addClass("active");
         return !game.game_over() && piece.search(userColor) === 0;
     };
