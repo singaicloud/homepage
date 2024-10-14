@@ -222,7 +222,7 @@ function TopologyFinale() {
             update_particles();
             display_particles();
             tick += 1;
-            if (tick >= 2000) {p.noLoop(); }
+            if (tick >= 4000) {p.noLoop(); }
         };
 
         function init_particles() {
