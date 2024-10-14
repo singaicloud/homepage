@@ -1,5 +1,5 @@
 // Wait for the DOM to be fully loaded before executing code
-document.addEventListener('DOMContentLoaded', () => {
+jQuery(() => {
     var game = null;
     let board = null; 
 
@@ -268,4 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
     jQuery.getScript("assets/chess/chessboard-1.0.0.min.js", ()=>{
         board = Chessboard('board', boardConfig);
     })
+    jQuery(".chess .button").on("click", ()=>{
+        jQuery(".chess").removeClass("active");
+        jQuery(".headline").css('visibility', 'visible');
+    });
 });
