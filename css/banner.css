@@ -59,6 +59,9 @@
   transform: perspective(900px) rotate3D(1, 0, 0, 30deg) translate(0px, -200px);
   max-width: inherit;
 }
+.chess.disabled {
+  pointer-events: none;
+}
 .chess .button {
   visibility: hidden;
 }

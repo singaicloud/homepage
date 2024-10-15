@@ -269,7 +269,7 @@ jQuery(() => {
         board = Chessboard('board', boardConfig);
     })
     jQuery(".chess .button").on("click", ()=>{
-        jQuery(".chess").removeClass("active");
+        jQuery(".chess").removeClass("active").addClass("disabled");
         jQuery(".headline").css('visibility', 'visible');
     });
 });
