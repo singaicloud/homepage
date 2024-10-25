@@ -153,6 +153,62 @@
 .research .item .icon img {
     height: 2rem;
 }
+.research .team h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.research .team .member {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.research .team .member .basic {
+
+    gap: .5rem;
+    align-items: baseline;
+}
+.research .team .member .basic .name {
+    color: white;
+    font-weight: bold;
+}
+.research .team .member .basic .website-link {
+    font-size: 0.85rem;
+    margin-left: .5rem;
+}
+.research .team .member .basic .position {
+    font-size: .9rem;
+}
+.research .team .member .bio {
+    font-size: .85rem;
+    color: #c9c9c9;
+}
+.research .team .member .external-link {
+    color: #c9c9c9;
+}
+.research .team .member .external-link::after {
+    content: "";
+    width: .8rem;
+    height: .8rem;
+    margin-left: .1rem;
+    display: inline-block;
+    vertical-align: middle;
+    background: #c9c9c9;
+    mask-image: url(../assets/link.svg);
+    mask-size: cover;
+    position: relative;
+    top: -1px;
+}
+.research .team .avatar {
+    flex: 0 0 70px;
+}
+.research .team .avatar a {
+    display: flex;
+    align-items: center;
+}
+.research .team .avatar img {
+    border-radius: 50%;
+}
 .research .link {
     margin-top: auto;
     z-index: 100;
@@ -194,6 +250,14 @@
     .research .solution h4 {
         font-size: .9rem;
         color: #d3d3d3;
+    }
+}
+@media screen and (max-width: 500px) { 
+    .research .team .member {
+        flex-direction: column;
+    }
+    .research .team .avatar {
+        width: 120px;
     }
 }
 
