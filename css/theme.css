@@ -87,14 +87,14 @@ input, select, textarea {
   flex: 1;
   display: flex;
   align-items: center; /* align vertical */
-  height: 76px;
+  height: 82px;
 }
 .menubar .logo a {
   border: none;
   display: flex;
 }
 .menubar .logo img {
-  height: 36px;
+  height: 42px;
 }
 .menubar .items {
   justify-content: center;
